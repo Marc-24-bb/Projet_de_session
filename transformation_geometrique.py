@@ -24,9 +24,7 @@ def calculer_rotate_point(tuple_p, tuple_c, angle):
         angle_final +=360
 
     angle_final_rad = math.radians(angle_final)
-    coord_x = math.cos(angle_final_rad) * distance
-    coord_y = math.sin(angle_final_rad) * distance
+    coord_x = round((math.cos(angle_final_rad) * distance),2)
+    coord_y = round((math.sin(angle_final_rad) * distance),2)
 
     return coord_x, coord_y
-resultat = calculer_rotate_point((2,4), (0,0), -45)
-print(resultat)
