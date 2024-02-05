@@ -26,7 +26,6 @@ def calculer_rotate_point(tuple_p, tuple_c, angle):
     angle_final_rad = math.radians(angle_final)
     coord_x = math.cos(angle_final_rad) * distance
     coord_y = math.sin(angle_final_rad) * distance
-    djndvndvmvkv v fvkfv
 
     return coord_x, coord_y
 resultat = calculer_rotate_point((2,4), (0,0), -45)
