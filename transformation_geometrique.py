@@ -1,5 +1,5 @@
 import math
-
+import numpy as np
 
 def calculer_reflexion_point(tuple, axe):
     reflexion_point_x = None
@@ -28,3 +28,19 @@ def calculer_rotate_point(tuple_p, tuple_c, angle):
     coord_y = round((math.sin(angle_final_rad) * distance),2)
 
     return coord_x, coord_y
+
+def calculer_inclinaison_point(tuple, angle, direction):
+    matrice_po = np.array([[tuple[0]],
+                           [tuple[1]]])
+    m = math.tan(math.radians(angle))
+    matrice_x = np.array([[1, m],
+                          [0, 1]])
+    matrice_y = np.array([[1, 0],
+                          [m , 1]])
+    if direction == 'x':
+        matrice_pf = np.round(np.dot(matrice_x, matrice_po), decimals=2)
+    elif direction == 'y':
+        matrice_pf = np.round(np.dot(matrice_y, matrice_po), decimals=2)
+    tuple_pf = [matrice_pf[0, 0], matrice_pf[1, 0]]
+
+    return (tuple_pf)
