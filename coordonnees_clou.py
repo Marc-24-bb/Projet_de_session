@@ -1,4 +1,5 @@
 def calculer_coordonnees_clou(a, b, c, d, e):
+    # Les équations servent à trouver la distance X et Y de l'origine
     tuple_t0 = ((b * -1) / 2, c / 2)
     tuple_t1 = ((b * -1) / 2, (-1 * c) / 2)
     tuple_t2 = (((b * -1) / 2) - d, -1 * a / 2)
