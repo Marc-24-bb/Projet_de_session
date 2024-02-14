@@ -41,6 +41,6 @@ def calculer_inclinaison_point(tuple, angle, direction):
         matrice_pf = np.round(np.dot(matrice_x, matrice_po), decimals=2)
     elif direction == 'y':
         matrice_pf = np.round(np.dot(matrice_y, matrice_po), decimals=2)
-    tuple_pf = [matrice_pf[0, 0], matrice_pf[1, 0]]
+    tuple_pf = (matrice_pf[0, 0], matrice_pf[1, 0])
 
-    return (tuple_pf)
+    return tuple_pf
