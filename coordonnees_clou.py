@@ -9,13 +9,13 @@ def calculer_coordonnees_clou(a, b, c, d, e):
     tuple_k1 = (b / 2, -1 * c / 2)
     tuple_k2 = (b / 2, c / 2)
     return list[('pt_0', tuple_t0), ('pt_1', tuple_t1), ('pt_2', tuple_t2), ('pt_3', tuple_t3), ('pk_2', tuple_k2), ('pk_0', tuple_k0), ('pk_1', tuple_k1)]
-
+'''
 def appliquer_transformation_clou(points_clou, center_rotation, angle_rotation, angle_inclinaison, direction_inclinaison, axe_reflexion):
     liste_point = [calculer_coordonnees_clou(3,10,1,.75,2)]
     return liste_point[]
 print(appliquer_transformation_clou(calculer_coordonnees_clou(3,10,1,.75,2), (0,0),30,20,'x','x'))
 
-'''
+
     liste_reflexion =list(points_clou.copy())
     liste_rotation = list(points_clou.copy())
     liste_inclinaison = list(points_clou.copy())
