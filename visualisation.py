@@ -2,9 +2,11 @@
 # le traitement des images, la segmentation et la manipulation des histogrammes.
 # matplotlib.pyplot est utilisé pour la visualisation graphique.
 from coordonnees_clou import *
+'''
 from traitement_image import *
 from segmentation import *
 from manupulation_histogramme import *
+'''
 import matplotlib.pyplot as plt
 
 # Définition des constantes qui représentent les dimensions spécifiques du clou.
