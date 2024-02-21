@@ -36,11 +36,10 @@ __PATH_IMAGE_NG = 'image_niveaux_de_gris.jpg'
 
 # Fonction pour visualiser les points du clou.
 def visualiser_points_clou(coordonnees_et_noms):
-
     # Création d'une figure pour la visualisation graphique des points du clou.
     plt.figure(figsize=(10, 4))
     for nom, (x, y) in coordonnees_et_noms:
-        plt.plot(x, y, marker='o')  # Marquer chaque point avec un cercle
+        plt.plot(x,y, marker='o')  # Marquer chaque point avec un cercle
         plt.text(x, y, nom)         # Ajouter le nom du point à côté du marqueur
 
     # Configuration du titre, des axes et de la grille de la figure.
@@ -168,7 +167,8 @@ if __name__ == '__main__':
     # des images en couleur et en niveaux de gris, des transformations d'image
     # et de l'image segmentée.
     visualiser_points_clou(__COORDS_CLOU)
-    visualiser_transformations_clou(__REFLECTED_COORD, __ROTATED_COORD, __INCLIN_COORD)
+    #visualiser_transformations_clou(__REFLECTED_COORD, __ROTATED_COORD, __INCLIN_COORD)
+    '''
     visualiser_image_couleur_ng(__PATH_IMAGE_ORIG, __PATH_IMAGE_NG)
     visualiser_transforms_image(__PATH_IMAGE_NG)
     visualiser_seg_image(__PATH_IMAGE_NG)

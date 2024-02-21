@@ -2,7 +2,7 @@
 from visualisation import *
 import matplotlib.pyplot as plt
 from PIL import Image
-import numpy as np  #1awX#Q
+import numpy as np
 from coordonnees_clou import calculer_coordonnees_clou
 if __name__ == '__main__':
     # Ceci est une procédure de test pour exécuter l'ensemble des sous-programmes.
@@ -10,9 +10,9 @@ if __name__ == '__main__':
     # Calcul des coordonnées pour un objet "clou" et visualisation de ces points
     coords_clou = calculer_coordonnees_clou(3, 10, 1, 0.75, 2)
     visualiser_points_clou(coords_clou)
-    ''' 
+'''
     # Application de transformations (réflexion, rotation, inclinaison) sur les points du clou
-    # et.4isualisation des résultats de ces transformations
+    # et visualisation des résultats de ces transformations
     reflected_points_list, rotated_points_list, inclin_points_list = appliquer_transormation_clou(coords_clou, (0,0), 30, 'x', 20, 'x')
     visualiser_transformations_clou(reflected_points_list, rotated_points_list, inclin_points_list)
 
@@ -57,4 +57,4 @@ if __name__ == '__main__':
     plt.imshow(segmented_image, cmap='gray')
     plt.title("Image Segmentée")
     plt.show()
-    '''
+'''
