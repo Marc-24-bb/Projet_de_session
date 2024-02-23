@@ -42,7 +42,7 @@ def calculer_inclinaison_point(tuple, angle, direction):
 
     #Crée une variable m pour l'angle
     m = math.tan(math.radians(angle))
-
+    print(type(angle))
     # Création de deux matrices multiplicatives
     matrice_x = np.array([[1, m],
                           [0, 1]])

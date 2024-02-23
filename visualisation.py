@@ -28,7 +28,7 @@ __AXE_REFLEX = 'x'    # Axe de réflexion
 
 # Application des transformations (réflexion, rotation, inclinaison) sur le clou
 # et stockage des coordonnées transformées.
-# __REFLECTED_COORD, __ROTATED_COORD, __INCLIN_COORD = appliquer_transormation_clou(__COORDS_CLOU, __CENTER_ROT, __ANGLE_ROT, __DIR_INCL, __ANGLE_INCL, __AXE_REFLEX)
+__REFLECTED_COORD, __ROTATED_COORD, __INCLIN_COORD = appliquer_transformation_clou(__COORDS_CLOU, __CENTER_ROT, __ANGLE_ROT, __DIR_INCL, __ANGLE_INCL, __AXE_REFLEX)
 
 # Chemins vers les images originale et en niveaux de gris.
 __PATH_IMAGE_ORIG = 'image_couleur.jpg'

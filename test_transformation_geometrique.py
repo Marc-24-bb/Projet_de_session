@@ -7,4 +7,4 @@ def test_calculer_rotate_point():
 
 
 def test_calculer_inclinaison_point():
-    assert  calculer_inclinaison_point((2,4), (5), 'x') == (2.35, 4.0)
+    assert  calculer_inclinaison_point((2,4), 5, 'x') == (2.35, 4.0)
