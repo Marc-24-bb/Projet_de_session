@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # et visualisation des résultats de ces transformations
     reflected_points_list, rotated_points_list, inclin_points_list = appliquer_transformation_clou(coords_clou, (0,0), 30, 'x', 20, 'x')
     visualiser_transformations_clou(reflected_points_list, rotated_points_list, inclin_points_list)
-'''
+
     # Chemin des images d'origine et en niveaux de gris
     path_image_orig = 'image_couleur.jpg'
     path_image_ng = 'image_niveaux_de_gris.jpg'
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # Ouverture de l'image en niveaux de gris et conversion en tableau NumPy
     img = Image.open(path_image_ng).convert('L')
     img_array = np.array(img)
-
+    '''
     # Application de transformations sur l'image et stockage des résultats
     image_trasf_1 = appliquer_transformation_1(img_array)
     image_trasf_2 = appliquer_transformation_2(img_array, radius=2)

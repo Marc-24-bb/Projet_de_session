@@ -2,8 +2,9 @@
 # le traitement des images, la segmentation et la manipulation des histogrammes.
 # matplotlib.pyplot est utilisé pour la visualisation graphique.
 from coordonnees_clou import *
-'''
 from traitement_image import *
+from PIL import Image
+'''
 from segmentation import *
 from manupulation_histogramme import *
 '''
@@ -168,8 +169,6 @@ if __name__ == '__main__':
     # et de l'image segmentée.
     visualiser_points_clou(__COORDS_CLOU)
     visualiser_transformations_clou(__REFLECTED_COORD, __ROTATED_COORD, __INCLIN_COORD)
-    '''
     visualiser_image_couleur_ng(__PATH_IMAGE_ORIG, __PATH_IMAGE_NG)
     visualiser_transforms_image(__PATH_IMAGE_NG)
     visualiser_seg_image(__PATH_IMAGE_NG)
-'''

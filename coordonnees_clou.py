@@ -22,3 +22,4 @@ def appliquer_transformation_clou(points_clou, center_rotation, angle_rotation, 
         nouvelle_liste_inclinaison.append((points_clou[i][0], calculer_inclinaison_point(points_clou[i][1], angle_inclinaison, direction_inclinaison)))
 
     return nouvelle_liste_reflexion, nouvelle_liste_rotation, nouvelle_liste_inclinaison
+
