@@ -2,9 +2,7 @@ import math
 import numpy as np
 
 def calculer_reflexion_point(tuple, axe):
-    # Création de deux variables
-    reflexion_point_x = None
-    reflexion_point_y = None
+
     # Si l'axe X est choisi, on multiplie la valeur Y par -1
     if axe == 'x':
         reflexion_point_y = tuple[1] * -1
