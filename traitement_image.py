@@ -17,7 +17,7 @@ def rgb_to_gry(chemin_image_couleur, chemin_sauvegarde_gris):
     image.save(chemin_sauvegarde_gris)
 
 
-def appliquer_transfromation_1(image_grise):
+def appliquer_transformation_1(image_grise):
     hauteur, largeur = image_grise.shape
     nouvelle_matrice = np.zeros((hauteur, largeur), dtype=int)
 
@@ -44,13 +44,17 @@ def appliquer_transfromation_1(image_grise):
     return nouvelle_matrice
 
 
-def appliquer_transformation_2(image_gris, rayon):
+def appliquer_transformation_2(image_gris, radius):
 
     largeur, hauteur = image_gris.shape
     matrice_resultante = np.zeros((largeur, hauteur))
 
-    for i in range(rayon, largeur -rayon):
-        for j in range(rayon, hauteur - rayon):
-            matrice_resultante[i][j] = math.log10(1 + abs(image_gris[i][j+rayon]) - 2 * (image_gris[i][j]) + abs(image_gris[i][j-rayon])) + math.log10(1 + abs(image_gris[i+rayon][j]) - 2 * (image_gris[i][j]) + abs(image_gris[i-rayon][j])) + math.log10(1 + abs(image_gris[i-rayon][j+rayon]) - 2 * (image_gris[i][j]) + abs(image_gris[i+rayon][j-rayon]))
+    for i in range(radius, largeur-radius):
+        for j in range(radius, hauteur-radius):
+          terme_1 = math.log10(1 + abs((image_gris[i, j+radius]) - 2 * (image_gris[i,j]) + (image_gris[i,j-radius])))
+          terme_2 = math.log10(1 + abs((image_gris[i+radius, j]) - 2 * (image_gris[i,j]) + (image_gris[i-radius,j])))
+          terme_3 = math.log10(1 + abs((image_gris[i-radius, j+radius]) - 2 * (image_gris[i,j]) + (image_gris[i+radius,j-radius])))
+          matrice_resultante[i][j] = int(terme_1 + terme_2 + terme_3)
 
     return matrice_resultante
+

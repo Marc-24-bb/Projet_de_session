@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 from coordonnees_clou import calculer_coordonnees_clou
+from manupulation_histogramme import *
 if __name__ == '__main__':
     # Ceci est une procédure de test pour exécuter l'ensemble des sous-programmes.
 
@@ -23,7 +24,7 @@ if __name__ == '__main__':
     # Conversion d'une image couleur en niveaux de gris et visualisation des deux images
     rgb_to_gry(path_image_orig, path_image_ng)
     visualiser_image_couleur_ng(path_image_orig, path_image_ng)
-'''
+
     # Ouverture de l'image en niveaux de gris et conversion en tableau NumPy
     img = Image.open(path_image_ng).convert('L')
     img_array = np.array(img)
@@ -57,4 +58,3 @@ if __name__ == '__main__':
     plt.imshow(segmented_image, cmap='gray')
     plt.title("Image Segmentée")
     plt.show()
-'''
