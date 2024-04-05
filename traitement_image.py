@@ -4,7 +4,22 @@ import math
 
 
 def rgb_to_gry(chemin_image_couleur, chemin_sauvegarde_gris):
+    '''
+    Description:
+    Cette fonction transforme une image en couleur en une nouvelle image
+    en niveaux de gris.
 
+
+    Arguments:
+    chemin_image_couleur (str): Le chemin de l'image en couleur à
+    transformer.
+    chemin_sauvegarde_gris (str): Le chemin où sauvegarder l'image
+    résultante en niveaux de gris.
+
+    Retourne :
+    None: La fonction ne retourne rien mais sauvegarde l'image en niveaux
+    de gris au chemin spécifié.
+    '''
     image = Image.open(chemin_image_couleur)
     largeur, hauteur = image.size
 
@@ -18,6 +33,22 @@ def rgb_to_gry(chemin_image_couleur, chemin_sauvegarde_gris):
 
 
 def appliquer_transformation_1(image_grise):
+    '''
+    Description:
+    Cette fonction prend une image en niveaux de gris sous forme d'un
+    tableau NumPy 2D et applique une transformation pour simplifier et
+    extraire des caractéristiques significatives de l'image.
+
+    Arguments:
+    image_gris (numpy.ndarray): Un tableau 2D NumPy représentant une
+    image en niveaux de gris. Chaque élément du tableau correspond à
+    l'intensité d'un pixel de l'image.
+
+    Retourne :
+    numpy.ndarray: Un tableau 2D NumPy résultant de la transformation
+    appliquée
+    '''
+
     hauteur, largeur = image_grise.shape
     nouvelle_matrice = np.zeros((hauteur, largeur), dtype=int)
 
@@ -45,6 +76,23 @@ def appliquer_transformation_1(image_grise):
 
 
 def appliquer_transformation_2(image_gris, radius):
+    '''
+    Description:
+     Transformer les données visuelles complexes d’une image en
+    ensembles de caractéristiques plus simples et plus significatives.
+
+
+    Arguments:
+    image_gris (numpy.ndarray): Un tableau 2D NumPy représentant une
+    image en niveaux de gris.
+    rayon (int): Un entier spécifiant le rayon du voisinage à considérer pour
+    chaque pixel lors de la transformation.
+
+    Retourne :
+    numpy.ndarray: Un tableau 2D NumPy résultant de la transformation
+    appliquée. Cette transformation est basée sur le rayon spécifié et peut
+    modifier les caractéristiques visuelles originales de l'image.
+    '''
 
     largeur, hauteur = image_gris.shape
     matrice_resultante = np.zeros((largeur, hauteur))
