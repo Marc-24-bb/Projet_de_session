@@ -2,6 +2,25 @@ from traitement_image import *
 import math
 
 def calculer_histogramme(tableau_2d, w):
+    '''
+    Description:
+    Génère un histogramme pour chaque pixel de l'image en utilisant un
+    carré de voisinage de taille spécifiée.
+
+
+    Arguments:
+    tableau_2D (numpy.ndarray): Un tableau 2D NumPy représentant une
+    image.
+
+    w (int): La taille du carré de voisinage autour de chaque pixel pour
+    lequel l'histogramme est calculé.
+
+
+    Retourne :
+    numpy.ndarray: Un tableau 2D NumPy où chaque ligne représente un
+    histogramme pour le carré correspondant de l'image.
+    '''
+
     x = tableau_2d.shape[0]
     y = tableau_2d.shape[1]
     window = []
@@ -15,6 +34,22 @@ def calculer_histogramme(tableau_2d, w):
     return np.array(liste_hist)
 
 def calculer_distance_1(histogramme_1, histogramme_2):
+    '''
+    Description:
+    Calculer la distance entre deux histogrammes.
+
+
+    Arguments:
+    histogramme1 (numpy.ndarray): Premier histogramme sous forme de
+    tableau 1D NumPy.
+
+    histogramme2 (numpy.ndarray): Deuxième histogramme sous forme de
+    tableau 1D NumPy
+
+    Retourne :
+    float: La distance entre les deux histogrammes.
+    '''
+
     somme = 0
     for p, q in zip(histogramme_1, histogramme_2):
       résultat = (p-q)**2
@@ -23,6 +58,22 @@ def calculer_distance_1(histogramme_1, histogramme_2):
     return distance
 
 def calculer_distance_2(histogramme_1, histogramme_2):
+    '''
+    Description:
+    Calculer la distance entre deux histogrammes.
+
+
+    Arguments:
+    histogramme1 (numpy.ndarray): Premier histogramme sous forme de
+    tableau 1D NumPy.
+
+    histogramme2 (numpy.ndarray): Deuxième histogramme sous forme de
+    tableau 1D NumPy
+
+    Retourne :
+    float: La distance entre les deux histogrammes.
+    '''
+
     somme = 0
     for p, q in zip(histogramme_1, histogramme_2):
         résultat = abs(p-q)
@@ -30,6 +81,3 @@ def calculer_distance_2(histogramme_1, histogramme_2):
         distance = round(somme,2)
     return distance
 
-def regrouper_points(tableau, k, max_iterations):
-    nombre_groupe = k
-    point_centraux = k
